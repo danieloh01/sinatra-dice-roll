@@ -10,8 +10,24 @@ BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 get("/") do
+  # erb(:elephant)
   "
-   
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  
+  <div class=\"navbar\">
+    <div><a href=\"/\">Home</a></div>
+    <div><a href=\"/dice/2/6\">2d6</a></div>
+    <div><a href=\"/dice/2/10\">2d10</a></div>
+    <div><a href=\"/dice/1/20\">1d20</a></div>
+    <div><a href=\"/dice/5/4\">4d5</a></div>
+  </div>
+
+
   <h1>Dice Roll</h1>
   <ul>
     <li><a href=\"/dice/2/6\">Roll two 6-sided dice</a></li>
@@ -21,7 +37,6 @@ get("/") do
   </ul>
   "
 end
-
 
 
 get("/zebra") do
